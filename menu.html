@@ -222,207 +222,237 @@ body {
 }
 
 .back-link:hover { color: #ef7918; }
+
+.header-top {
+    justify-content: space-between;
+}
+.lang-switcher {
+    display: flex;
+    gap: 4px;
+}
+.lang-btn {
+    background: #222;
+    color: #ccc;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.lang-btn.active {
+    background: #ef7918;
+    color: white;
+    border-color: #ef7918;
+}
 </style>
+
 </head>
 <body>
 
 <!-- STICKY HEADER -->
 <div class="header">
+  
   <div class="header-top">
     <img src="Grato.png" class="header-logo" alt="Grato">
     <span class="header-title">Grato Menyu</span>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="uz">🇺🇿 UZ</button>
+        <button class="lang-btn" data-lang="ru">🇷🇺 RU</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+    </div>
   </div>
 
   <div class="search-wrap">
-    <input id="searchInput" type="text" placeholder="🔍 Taom nomi bo'yicha qidirish...">
+    <input id="searchInput" type="text" placeholder="🔍 Taom nomi bo'yicha qidirish..." data-uz="🔍 Taom nomi bo'yicha qidirish..." data-ru="🔍 Поиск блюд..." data-en="🔍 Search food...">
   </div>
 
   <div class="buttons">
-    <button data-type="all" class="active">Hammasi</button>
-    <button data-type="first">🍲 1-taom</button>
-    <button data-type="second">🍽 2-taom</button>
-    <button data-type="salat">🥗 Salatlar</button>
+    <button data-type="all" class="active" data-uz="Hammasi" data-ru="Все" data-en="All">Hammasi</button>
+    <button data-type="first" data-uz="🍲 1-taom" data-ru="🍲 1-блюдо" data-en="🍲 Soups">🍲 1-taom</button>
+    <button data-type="second" data-uz="🍽 2-taom" data-ru="🍽 2-блюдо" data-en="🍽 Main course">🍽 2-taom</button>
+    <button data-type="salat" data-uz="🥗 Salatlar" data-ru="🥗 Салаты" data-en="🥗 Salads">🥗 Salatlar</button>
     <button data-type="desert">🥗 Desert</button>
   </div>
 </div>
 
 <!-- BACK LINK -->
-<a href="index.html" class="back-link">← Bosh sahifaga qaytish</a>
+<a href="index.html" class="back-link" data-uz="← Bosh sahifaga qaytish" data-ru="← На главную" data-en="← Go back">← Bosh sahifaga qaytish</a>
 
 <!-- CATEGORY LABELS + CARDS -->
-<div id="label-first" class="category-label">🍲 1-taom – Sho'rvalar</div>
+<div id="label-first" class="category-label" data-uz="🍲 1-taom – Sho'rvalar" data-ru="🍲 1-блюдо – Супы" data-en="🍲 1st Course – Soups">🍲 1-taom – Sho'rvalar</div>
 <div class="menu" id="grid-first">
   <div class="card first">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Frikadelki sho'rva.PNG" alt="Frikadelki sho'rva" loading="lazy">
-    <div class="info"><h3>Frikadelki sho'rva</h3><p>25 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Frikadelki%20sho'rva.PNG" alt="Frikadelki sho'rva" loading="lazy">
+    <div class="info"><h3 data-uz="Frikadelki sho'rva" data-ru="Суп с фрикадельками" data-en="Meatball Soup">Frikadelki sho'rva</h3><p>25 000 so'm</p></div>
   </div>
   <div class="card first">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Tushonka sho'rva.PNG" alt="Tushonka sho'rva" loading="lazy">
-    <div class="info"><h3>Tushonka sho'rva</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Tushonka%20sho'rva.PNG" alt="Tushonka sho'rva" loading="lazy">
+    <div class="info"><h3 data-uz="Tushonka sho'rva" data-ru="Суп с тушенкой" data-en="Stew Soup">Tushonka sho'rva</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card first">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Solyanka.PNG" alt="Solyanka" loading="lazy">
-    <div class="info"><h3>Solyanka</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Solyanka.PNG" alt="Solyanka" loading="lazy">
+    <div class="info"><h3 data-uz="Solyanka" data-ru="Солянка" data-en="Solyanka Soup">Solyanka</h3><p>30 000 so'm</p></div>
   </div>
 </div>
 
-<div id="label-second" class="category-label">🍽 2-taom – Asosiy taomlar</div>
+<div id="label-second" class="category-label" data-uz="🍽 2-taom – Asosiy taomlar" data-ru="🍽 2-блюдо – Основные блюда" data-en="🍽 2nd Course – Main Dishes">🍽 2-taom – Asosiy taomlar</div>
 <div class="menu" id="grid-second">
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Asorti Golubsi.PNG" alt="Asorti Golubsi" loading="lazy">
-    <div class="info"><h3>Asorti Golubsi</h3><p>35 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Asorti%20Golubsi.PNG" alt="Asorti Golubsi" loading="lazy">
+    <div class="info"><h3 data-uz="Asorti Golubsi" data-ru="Ассорти голубцы" data-en="Assorted Stuffed Cabbage">Asorti Golubsi</h3><p>35 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Uyg'ur lag'mon.PNG" alt="Uyg'ur lag'mon" loading="lazy">
-    <div class="info"><h3>Uyg'ur lag'mon</h3><p>35 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Uyg'ur%20lag'mon.PNG" alt="Uyg'ur lag'mon" loading="lazy">
+    <div class="info"><h3 data-uz="Uyg'ur lag'mon" data-ru="Уйгурский лагман" data-en="Uyghur Lagman">Uyg'ur lag'mon</h3><p>35 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Qovurma lag'mon.PNG" alt="Qovurma lag'mon" loading="lazy">
-    <div class="info"><h3>Qovurma lag'mon</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Qovurma%20lag'mon.PNG" alt="Qovurma lag'mon" loading="lazy">
+    <div class="info"><h3 data-uz="Qovurma lag'mon" data-ru="Ковурма лагман" data-en="Fried Lagman">Qovurma lag'mon</h3><p>30 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Amlet.PNG" alt="Amlet" loading="lazy">
-    <div class="info"><h3>Amlet</h3><p>25 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Amlet.PNG" alt="Amlet" loading="lazy">
+    <div class="info"><h3 data-uz="Amlet" data-ru="Омлет" data-en="Omelet">Amlet</h3><p>25 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Go'shtli kotlet.PNG" alt="Go'shtli kotlet" loading="lazy">
-    <div class="info"><h3>Go'shtli kotlet</h3><p>15 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Go'shtli%20kotlet.PNG" alt="Go'shtli kotlet" loading="lazy">
+    <div class="info"><h3 data-uz="Go'shtli kotlet" data-ru="Мясная котлета" data-en="Meat Cutlet">Go'shtli kotlet</h3><p>15 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Tovuqli Kotlet.PNG" alt="Tovuqli Kotlet" loading="lazy">
-    <div class="info"><h3>Tovuqli Kotlet</h3><p>15 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Tovuqli%20Kotlet.PNG" alt="Tovuqli Kotlet" loading="lazy">
+    <div class="info"><h3 data-uz="Tovuqli Kotlet" data-ru="Куриная котлета" data-en="Chicken Cutlet">Tovuqli Kotlet</h3><p>15 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Go'sht%2Bpomidor%2Bsir li kotlet.PNG" alt="Go'sht+pomidor+sir li kotlet" loading="lazy">
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Go'sht%252Bpomidor%252Bsir%20li%20kotlet.PNG" alt="Go'sht+pomidor+sir li kotlet" loading="lazy">
     <div class="info"><h3>Go'sht+pomidor+sir li kotlet</h3><p>18 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Go'shtli chuchvara.PNG" alt="Go'shtli chuchvara" loading="lazy">
-    <div class="info"><h3>Go'shtli chuchvara</h3><p>25 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Go'shtli%20chuchvara.PNG" alt="Go'shtli chuchvara" loading="lazy">
+    <div class="info"><h3 data-uz="Go'shtli chuchvara" data-ru="Чучвара с мясом" data-en="Meat Dumplings">Go'shtli chuchvara</h3><p>25 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Ismaloqli chuchvara.PNG" alt="Ismaloqli chuchvara" loading="lazy">
-    <div class="info"><h3>Ismaloqli chuchvara</h3><p>20 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Ismaloqli%20chuchvara.PNG" alt="Ismaloqli chuchvara" loading="lazy">
+    <div class="info"><h3 data-uz="Ismaloqli chuchvara" data-ru="Чучвара со шпинатом" data-en="Spinach Dumplings">Ismaloqli chuchvara</h3><p>20 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Grato Burger.jpg" alt="Grato Burger" loading="lazy">
-    <div class="info"><h3>Grato Burger</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Grato%20Burger.jpg" alt="Grato Burger" loading="lazy">
+    <div class="info"><h3 data-uz="Grato Burger" data-ru="Бургер Грато" data-en="Grato Burger">Grato Burger</h3><p>30 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Go'shtli say.PNG" alt="Go'shtli say" loading="lazy">
-    <div class="info"><h3>Go'shtli say</h3><p>45 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Go'shtli%20say.PNG" alt="Go'shtli say" loading="lazy">
+    <div class="info"><h3 data-uz="Go'shtli say" data-ru="Сай с мясом" data-en="Meat Stir-fry">Go'shtli say</h3><p>45 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Tovuqli Say.PNG" alt="Tovuqli Say" loading="lazy">
-    <div class="info"><h3>Tovuqli Say</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Tovuqli%20Say.PNG" alt="Tovuqli Say" loading="lazy">
+    <div class="info"><h3 data-uz="Tovuqli Say" data-ru="Сай с курицей" data-en="Chicken Stir-fry">Tovuqli Say</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Grato Jiz(Sabzavotli).jpg" alt="Grato Jiz(Sabzavotli)" loading="lazy">
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Grato%20Jiz(Sabzavotli).jpg" alt="Grato Jiz(Sabzavotli)" loading="lazy">
     <div class="info"><h3>Grato Jiz(Sabzavotli)</h3><p>65 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Grato Jiz Tovuq(Sabzavotli).jpg" alt="Grato Jiz Tovuq(Sabzavotli)" loading="lazy">
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Grato%20Jiz%20Tovuq(Sabzavotli).jpg" alt="Grato Jiz Tovuq(Sabzavotli)" loading="lazy">
     <div class="info"><h3>Grato Jiz Tovuq(Sabzavotli)</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Grato nonushtasi.PNG" alt="Grato nonushtasi" loading="lazy">
-    <div class="info"><h3>Grato nonushtasi</h3><p>35 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Grato%20nonushtasi.PNG" alt="Grato nonushtasi" loading="lazy">
+    <div class="info"><h3 data-uz="Grato nonushtasi" data-ru="Завтрак Грато" data-en="Grato Breakfast">Grato nonushtasi</h3><p>35 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Jigar Vag'uri.jpg" alt="Jigar Vag'uri" loading="lazy">
-    <div class="info"><h3>Jigar Vag'uri</h3><p>60 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Jigar%20Vag'uri.jpg" alt="Jigar Vag'uri" loading="lazy">
+    <div class="info"><h3 data-uz="Jigar Vag'uri" data-ru="Печень Вагури" data-en="Liver Vaguri">Jigar Vag'uri</h3><p>60 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/KFS.PNG" alt="KFS" loading="lazy">
-    <div class="info"><h3>KFS</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/KFS.PNG" alt="KFS" loading="lazy">
+    <div class="info"><h3 data-uz="KFS" data-ru="КФС (Курица)" data-en="KFC Style Chicken">KFS</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Manti.PNG" alt="Manti" loading="lazy">
-    <div class="info"><h3>Manti</h3><p>6 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Manti.PNG" alt="Manti" loading="lazy">
+    <div class="info"><h3 data-uz="Manti" data-ru="Манты" data-en="Manti Dumplings">Manti</h3><p>6 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Podjarka.JPG" alt="Podjarka" loading="lazy">
-    <div class="info"><h3>Podjarka</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Podjarka.JPG" alt="Podjarka" loading="lazy">
+    <div class="info"><h3 data-uz="Podjarka" data-ru="Поджарка" data-en="Podjarka Stir-fry">Podjarka</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Qurutob.jpg" alt="Qurutob" loading="lazy">
-    <div class="info"><h3>Qurutob</h3><p>70 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Qurutob.jpg" alt="Qurutob" loading="lazy">
+    <div class="info"><h3 data-uz="Qurutob" data-ru="Курутоб" data-en="Qurutob">Qurutob</h3><p>70 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Sabzavotli Jigar.jpg" alt="Sabzavotli Jigar" loading="lazy">
-    <div class="info"><h3>Sabzavotli Jigar</h3><p>120 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Sabzavotli%20Jigar.jpg" alt="Sabzavotli Jigar" loading="lazy">
+    <div class="info"><h3 data-uz="Sabzavotli Jigar" data-ru="Печень с овощами" data-en="Liver with Veg">Sabzavotli Jigar</h3><p>120 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Sixcha Kabob.jpg" alt="Sixcha Kabob" loading="lazy">
-    <div class="info"><h3>Sixcha Kabob</h3><p>65 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Sixcha%20Kabob.jpg" alt="Sixcha Kabob" loading="lazy">
+    <div class="info"><h3 data-uz="Sixcha Kabob" data-ru="Шашлык в палочках" data-en="Skewer Kebab">Sixcha Kabob</h3><p>65 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Teriyaki go'shtli.PNG" alt="Teriyaki go'shtli" loading="lazy">
-    <div class="info"><h3>Teriyaki go'shtli</h3><p>45 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Teriyaki%20go'shtli.PNG" alt="Teriyaki go'shtli" loading="lazy">
+    <div class="info"><h3 data-uz="Teriyaki go'shtli" data-ru="Терияки с мясом" data-en="Beef Teriyaki">Teriyaki go'shtli</h3><p>45 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Teriyaki Tovuqli.PNG" alt="Teriyaki Tovuqli" loading="lazy">
-    <div class="info"><h3>Teriyaki Tovuqli</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Teriyaki%20Tovuqli.PNG" alt="Teriyaki Tovuqli" loading="lazy">
+    <div class="info"><h3 data-uz="Teriyaki Tovuqli" data-ru="Терияки с курицей" data-en="Chicken Teriyaki">Teriyaki Tovuqli</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Tovuqli Rulet.PNG" alt="Tovuqli Rulet" loading="lazy">
-    <div class="info"><h3>Tovuqli Rulet</h3><p>25 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Tovuqli%20Rulet.PNG" alt="Tovuqli Rulet" loading="lazy">
+    <div class="info"><h3 data-uz="Tovuqli Rulet" data-ru="Куриный рулет" data-en="Chicken Roll">Tovuqli Rulet</h3><p>25 000 so'm</p></div>
   </div>
   <div class="card second">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo ovqat/Turkcha Sarma Beyti.PNG" alt="Turkcha Sarma Beyti" loading="lazy">
-    <div class="info"><h3>Turkcha Sarma Beyti</h3><p>25 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20ovqat/Turkcha%20Sarma%20Beyti.PNG" alt="Turkcha Sarma Beyti" loading="lazy">
+    <div class="info"><h3 data-uz="Turkcha Sarma Beyti" data-ru="Турецкая Сарма Бейти" data-en="Turkish Sarma Beyti">Turkcha Sarma Beyti</h3><p>25 000 so'm</p></div>
   </div>
 </div>
 
-<div id="label-salat" class="category-label">🥗 Salatlar</div>
+<div id="label-salat" class="category-label" data-uz="🥗 Salatlar" data-ru="🥗 Салаты" data-en="🥗 Salads">🥗 Salatlar</div>
 <div class="menu" id="grid-salat">
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Grato.PNG" alt="Grato salati" loading="lazy">
-    <div class="info"><h3>Grato salati</h3><p>35 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Grato.PNG" alt="Grato salati" loading="lazy">
+    <div class="info"><h3 data-uz="Grato salati" data-ru="Салат Грато" data-en="Grato Salad">Grato salati</h3><p>35 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Vinegret.PNG" alt="Vinegret" loading="lazy">
-    <div class="info"><h3>Vinegret</h3><p>20 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Vinegret.PNG" alt="Vinegret" loading="lazy">
+    <div class="info"><h3 data-uz="Vinegret" data-ru="Винегрет" data-en="Vinaigrette">Vinegret</h3><p>20 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Seul.PNG" alt="Seul" loading="lazy">
-    <div class="info"><h3>Seul</h3><p>35 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Seul.PNG" alt="Seul" loading="lazy">
+    <div class="info"><h3 data-uz="Seul" data-ru="Сеул" data-en="Seoul Salad">Seul</h3><p>35 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Sveji.PNG" alt="Svejiy salat" loading="lazy">
-    <div class="info"><h3>Svejiy salat</h3><p>20 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Sveji.PNG" alt="Svejiy salat" loading="lazy">
+    <div class="info"><h3 data-uz="Svejiy salat" data-ru="Свежий салат" data-en="Fresh Salad">Svejiy salat</h3><p>20 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Qarsildoq Baqlajon.PNG" alt="Qarsildoq Baqlajon" loading="lazy">
-    <div class="info"><h3>Qarsildoq Baqlajon</h3><p>45 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Qarsildoq%20Baqlajon.PNG" alt="Qarsildoq Baqlajon" loading="lazy">
+    <div class="info"><h3 data-uz="Qarsildoq Baqlajon" data-ru="Хрустящие баклажаны" data-en="Crispy Eggplant">Qarsildoq Baqlajon</h3><p>45 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Bahor salati.jpg" alt="Bahor salati" loading="lazy">
-    <div class="info"><h3>Bahor salati</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Bahor%20salati.jpg" alt="Bahor salati" loading="lazy">
+    <div class="info"><h3 data-uz="Bahor salati" data-ru="Весенний салат" data-en="Spring Salad">Bahor salati</h3><p>30 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Bavarskiy.PNG" alt="Bavarskiy salat" loading="lazy">
-    <div class="info"><h3>Bavarskiy salat</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Bavarskiy.PNG" alt="Bavarskiy salat" loading="lazy">
+    <div class="info"><h3 data-uz="Bavarskiy salat" data-ru="Баварский салат" data-en="Bavarian Salad">Bavarskiy salat</h3><p>30 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Baqlajon Rulet.PNG" alt="Baqlajon Rulet" loading="lazy">
-    <div class="info"><h3>Baqlajon Rulet</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Baqlajon%20Rulet.PNG" alt="Baqlajon Rulet" loading="lazy">
+    <div class="info"><h3 data-uz="Baqlajon Rulet" data-ru="Рулетики из баклажанов" data-en="Eggplant Rolls">Baqlajon Rulet</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Fransuzki.PNG" alt="Fransuz salati" loading="lazy">
-    <div class="info"><h3>Fransuz salati</h3><p>30 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Fransuzki.PNG" alt="Fransuz salati" loading="lazy">
+    <div class="info"><h3 data-uz="Fransuz salati" data-ru="Французский салат" data-en="French Salad">Fransuz salati</h3><p>30 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Adana.PNG" alt="Adana" loading="lazy">
-    <div class="info"><h3>Adana</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Adana.PNG" alt="Adana" loading="lazy">
+    <div class="info"><h3 data-uz="Adana" data-ru="Адана" data-en="Adana Salad">Adana</h3><p>40 000 so'm</p></div>
   </div>
   <div class="card salat">
-    <img src="https://gratofood.github.io/cafe-only-menu-/photo salat/Mujskoy kapriz.jpg" alt="Mujskoy Kapriz" loading="lazy">
-    <div class="info"><h3>Mujskoy Kapriz</h3><p>40 000 so'm</p></div>
+    <img src="https://gratofood.github.io/cafe-only-menu-/photo%20salat/Mujskoy%20kapriz.jpg" alt="Mujskoy Kapriz" loading="lazy">
+    <div class="info"><h3 data-uz="Mujskoy Kapriz" data-ru="Мужской каприз" data-en="Men's Caprice">Mujskoy Kapriz</h3><p>40 000 so'm</p></div>
   </div>
 </div>
 
-<p id="emptyState">😔 Hech narsa topilmadi.</p>
+<p id="emptyState" data-uz="😔 Hech narsa topilmadi." data-ru="😔 Ничего не найдено." data-en="😔 Nothing found.">😔 Hech narsa topilmadi.</p>
 
 <a href="https://t.me/Gratodeliverybot" class="order-fixed">💬 Buyurtma berish</a>
 
@@ -477,6 +507,26 @@ buttons.forEach(btn => {
 
 searchInput.addEventListener('input', applyFilters);
 applyFilters();
+
+const btnLangs = document.querySelectorAll('.lang-btn');
+btnLangs.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btnLangs.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.lang;
+        
+        document.querySelectorAll('[data-uz]').forEach(el => {
+            if (el.tagName === 'INPUT') {
+                el.placeholder = el.getAttribute('data-' + lang);
+            } else {
+                el.textContent = el.getAttribute('data-' + lang);
+            }
+        });
+        // re-apply filter to update search logic if needed
+        applyFilters();
+    });
+});
 </script>
+
 </body>
 </html>
